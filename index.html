@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Personal Portfolio | Aniol Jordan</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.png">
+            <a href="https://www.linkedin.com/in/aniol-jord%C3%A1n-l%C3%B3pez-35854123a/" target="_blank">Aniol Jordan Lopez</a>
+        </div>
+        <ul>
+            <li><a href="#main">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+        <button>Contact Me</button>
+        <button id="menuButton" onclick="openMenu()">
+            <i class='bx bx-menu'></i>
+        </button>
+    </nav>
+
+    <div class="main" id="main">
+        <div class="left">
+            <h5>Hey, I am Aniol Jordan</h5>
+            <h3>I am <span>Full Stack Developer</span></h3>
+            <p>
+                👋 I'm a Full Stack Developer focused on backend. I primarily work with Java, MySQL, HTML, and CSS to build solid and efficient applications. I use Git to maintain an organized workflow and collaborate with teams.
+            </p>
+            <button>Get In Touch</button>
+        </div>
+        <div class="right">
+            <img src="assets/header-img1.png">
+        </div>
+    </div>
+
+    <div class="skills" id="skills">
+        <h5>My Skills</h5>
+        <h3>My Expertise</h3>
+        <div class="skill-items">
+            <div class="item">
+                <div class="icon"><i class='bx bxl-java'></i></div>
+                <h4>Backend</h4>
+                <p>
+                    🔧 I have been programming with Java for 2 years, developing robust and scalable applications.
+                    I work with frameworks like Spring Boot and focus on writing clean, efficient, and well-structured code.
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon"><i class='bx bxl-html5'></i></div>
+                <h4>Frontend</h4>
+                <p>
+                    I have worked with HTML and CSS to create attractive and functional interfaces,
+                    and I have used JavaScript to add interactivity and dynamism to the applications.
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon"><i class='bx bxs-data'></i></i></div>
+                <h4>Data Base</h4>
+                <p>
+                    For my applications, I have used MySQL for data management and also implemented MongoDB in projects that require NoSQL databases.
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon"><i class='bx bxl-github'></i></i></div>
+                <h4>Utils</h4>
+                <p>
+                    For planning, I have used tools like Trello and Figma, and for version control, I have worked with GitHub to manage and organize the development of the projects.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="left">
+            <img src="assets/about-img2.png">
+        </div>
+        <div class="right">
+            <h5>About</h5>
+            <h3>About Me</h3>
+            <p>
+                I'm a passionate developer with a strong background in Cross-Platform Application Development. I have completed a Higher Education Program in this field, which has provided me with a solid technical foundation.  
+                During my professional internship, I worked as a programmer developing various applications, allowing me to apply my knowledge to real projects.  
+                Additionally, I am always looking to improve my skills. I have taken self-taught courses in Git, Visual Studio, HTML, CSS, and more to stay updated with the latest technologies and development practices.  
+                My goal is to continue learning, enhance my skills, and contribute to projects that challenge me to grow as a professional.
+            </p>
+        </div>
+    </div>
+
+    <div class="portfolio" id="portfolio">
+        <div class="header">
+            <div class="info">
+                <h5>Recent Projects</h5>
+                <h3>My Portfolio</h3>
+            </div>
+        </div>
+
+        <div class="portfo-items">
+            <div class="item">
+                <img src="assets/ERP.PNG">
+                <div class="info">
+                    <h4>ERP</h4>
+                    <p>
+                        ERP for a furniture company, developed with Java, Spring Boot, MySQL, MongoDB, CSS, HTML, and JavaScript
+                    </p>
+                    <a href="https://github.com/Anioljordan/ERP">View in GitHub <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/magatzem2.png">
+                <div class="info">
+                    <h4>Management Applications</h4>
+                    <p>
+                        Management Application developed with JavaFX, Java, and MySQL.
+                    </p>
+                    <a href="https://github.com/Anioljordan/AplicacionAlmacen">View in GitHub <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/PersonalPortfolio.png">
+                <div class="info">
+                    <h4>Personal Portfolio</h4>
+                    <p>
+                        Este es mi portafolio personal desarollado con HTML y CSS.
+                    </p>
+                    <a href="#">View in GitHub <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="assets/logo.png">
+                <a>Aniol Jordan</a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="bottom">
+            <p>
+                Made By Aniol Jordan
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
