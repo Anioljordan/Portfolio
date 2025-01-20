@@ -136,7 +136,7 @@ nav button#menuButton {
 }
 
 .skills {
-    padding: 110px 85px 0;
+    padding: 85px 0;
 }
 
 .skills h3,
@@ -197,7 +197,7 @@ nav button#menuButton {
 }
 
 .about {
-    padding: 110px;
+    padding: 60px;
     display: flex;
     align-items: center;
     gap: 60px;
@@ -219,7 +219,7 @@ nav button#menuButton {
 
 .portfolio {
     background-color: #deebee;
-    padding: 110px 85px;
+    padding: 60px;
 }
 
 .portfolio .header {
@@ -296,7 +296,7 @@ nav button#menuButton {
 }
 
 .feedback {
-    padding: 110px 85px;
+    padding: 85px;
 }
 
 .feedback .customers {
