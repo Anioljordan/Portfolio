@@ -513,14 +513,18 @@ footer .bottom .links a {
     nav.open .logo {
         display: none;
     }
+        nav.open .language-selector {
+    display: none;
+}
+    nav.open .skills {
+    display: none;
+}
 
     nav.open ul {
         display: flex;
     }
 
-    nav.open .language-selector {
-    display: none;
-}
+
 
     nav button#menuButton {
         display: flex;
