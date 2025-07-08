@@ -20,6 +20,31 @@ function copyEmail() {
     });
 }
 
+// Animaciones de entrada en scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.main, .skills, .about, .portfolio').forEach(section => {
+    section.classList.add('hidden');
+    observer.observe(section);
+});
+
+
+//abrir menu movil
+function openMenu() {
+    document.querySelector('nav').classList.toggle('open');
+}
+
+
+//cambiar idioma
+
 function changeLanguage(lang) {
     const elements = document.querySelectorAll("[data-i18n]");
     elements.forEach(element => {

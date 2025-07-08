@@ -39,6 +39,7 @@ nav {
     justify-content: space-between;
     height: 80px;
     box-shadow: 0 5px 80px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 nav .logo,
@@ -676,4 +677,475 @@ footer button#menuButton {
 
 .language-selector img.active {
     opacity: 1;
+}
+
+
+/* Animaciones de entrada */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Hover animado en botones */
+button:hover, footer button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(94, 59, 238, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animado en tarjetas del portfolio y skills */
+.portfolio .portfo-items .item:hover,
+.skills .skill-items .item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(94, 59, 238, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* responsive movil */
+
+@media screen and (max-width: 1200px) {
+
+    .main .left h5 {
+        font-size: 18px;
+    }
+
+    .main .left h3 {
+        font-size: 36px;
+    }
+
+    .main .left p {
+        font-size: 18px;
+    }
+
+    .main .right img {
+        width: 380px;
+    }
+
+    .skills .skill-items {
+        gap: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .skills .skill-items .item {
+        width: 49%;
+    }
+
+    .about .left img {
+        width: 370px;
+    }
+
+    .skills h3,
+    .about .right h3,
+    .portfolio .header h3,
+    .feedback h3 {
+        font-size: 32px;
+    }
+
+    .about .right p {
+        font-size: 15px;
+    }
+
+    .feedback .customers .item .rating {
+        font-size: 20px;
+    }
+
+    .feedback .customers .item p {
+        font-size: 13px;
+    }
+
+    footer .top ul {
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    nav button {
+        display: none;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .portfolio .portfo-items {
+        gap: 22px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portfolio .portfo-items .item {
+        width: 48%;
+    }
+
+    .feedback .customers {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feedback .customers .item {
+        width: 48%;
+    }
+
+    footer .top ul {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        justify-content: space-between;
+        padding: 0 42px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav.open .logo {
+        display: none;
+    }
+
+    nav.open ul {
+        display: flex;
+    }
+
+    nav button#menuButton {
+        display: flex;
+    }
+
+    .main {
+        padding: 42px;
+    }
+
+    .skills {
+        padding: 85px 42px 0;
+    }
+
+    .skills .skill-items {
+        gap: 8px;
+    }
+
+    .about {
+        padding: 85px 42px;
+    }
+
+    .portfolio {
+        padding: 60px 42px;
+    }
+
+    .portfolio .portfo-items {
+        gap: 18px;
+    }
+
+    .feedback {
+        padding: 85px 42px;
+    }
+
+    footer {
+        padding: 85px 42px;
+    }
+
+    footer .bottom {
+        flex-direction: column-reverse;
+        gap: 14px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    nav .logo a {
+        font-size: 18px;
+    }
+
+    .main .left h3 {
+        font-size: 32px;
+    }
+
+    .main .left p {
+        font-size: 16px;
+    }
+
+    .main .left button {
+        width: 100%;
+    }
+
+    .skills .skill-items .item {
+        width: 100%;
+    }
+
+    .portfolio .header button {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .portfolio .portfo-items .item {
+        width: 80%;
+    }
+
+    .feedback .customers .item {
+        width: 100%;
+    }
+
+}
+
+#success-message {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Animación para el mensaje */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        bottom: 0;
+    }
+
+    to {
+        opacity: 1;
+        bottom: 20px;
+    }
+}
+
+footer button {
+    color: #1c1e53;
+    background-color: transparent;
+    padding: 12px 16px;
+    border-radius: 5px;
+    border: 1px solid #1c1e53;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer button:hover {
+    background-color: #5e3bee;
+    border-color: #5e3bee;
+    color: #fff;
+}
+
+footer button#menuButton {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 7px;
+}
+
+/* Style for language selector in navbar */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-selector img {
+    width: 32px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, border 0.2s ease;
+    border-radius: 4px;
+    opacity: 0.5;
+    border: 2px solid transparent;
+}
+
+.language-selector img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.language-selector img.active {
+    opacity: 1;
+}
+/* Animaciones de entrada */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Hover animado en botones */
+button:hover, footer button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(94, 59, 238, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animado en tarjetas del portfolio y skills */
+.portfolio .portfo-items .item:hover,
+.skills .skill-items .item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(94, 59, 238, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .main .right img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .main .left h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .main .left p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .skills {
+        padding: 60px 20px 0;
+    }
+
+    .skills h3,
+    .about .right h3,
+    .portfolio .header h3,
+    .feedback h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .skills .skill-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills .skill-items .item {
+        width: 90%;
+    }
+
+    .about {
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+
+    .about .left img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .about .right p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .portfolio {
+        padding: 40px 20px;
+    }
+
+    .portfolio .portfo-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio .portfo-items .item {
+        width: 90%;
+    }
+
+    .feedback {
+        padding: 40px 20px;
+    }
+
+    .feedback .customers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback .customers .item {
+        width: 90%;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main .right img {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .main .left button,
+    .portfolio .header button,
+    footer button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .main .left,
+    .about .right,
+    .skills .skill-items .item,
+    .portfolio .header,
+    .portfolio .portfo-items .item .info,
+    .feedback .customers .item {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .skills .skill-items,
+    .feedback .customers,
+    .portfolio .portfo-items {
+        gap: 16px;
+    }
 }
