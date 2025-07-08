@@ -503,43 +503,45 @@ footer .bottom .links a {
 
     nav {
         justify-content: space-between;
-        padding: 0 42px;
+        padding: 0 20px;
     }
 
     nav ul {
         display: none;
     }
 
-    nav.open .logo {
+    nav.open .logo,
+    nav.open .language-selector,
+    nav.open button[data-i18n="btn_contact"] {
         display: none;
     }
-    nav.open .language-selector {
-    display: none;
-}
-    nav.open .skills {
-    display: none;
-}
 
-nav.open ul {
-    display: flex;
-    flex-direction: column;
-    max-height: 80vh;
-    overflow-y: auto;
-}
-
-
-
+    nav.open ul {
+        display: flex;
+        flex-direction: column;
+        max-height: 80vh;
+        overflow-y: auto;
+        gap: 16px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
 
     nav button#menuButton {
         display: flex;
     }
 
     .main {
-        padding: 42px;
+        padding: 20px;
     }
 
     .skills {
-        padding: 85px 42px 0;
+        padding: 60px 20px 0;
     }
 
     .skills .skill-items {
@@ -547,11 +549,11 @@ nav.open ul {
     }
 
     .about {
-        padding: 85px 42px;
+        padding: 60px 20px;
     }
 
     .portfolio {
-        padding: 60px 42px;
+        padding: 40px 20px;
     }
 
     .portfolio .portfo-items {
@@ -559,19 +561,19 @@ nav.open ul {
     }
 
     .feedback {
-        padding: 85px 42px;
+        padding: 60px 20px;
     }
 
     footer {
-        padding: 85px 42px;
+        padding: 60px 20px;
     }
 
     footer .bottom {
         flex-direction: column-reverse;
         gap: 14px;
     }
-
 }
+
 
 @media screen and (max-width: 576px) {
 
