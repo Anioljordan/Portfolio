@@ -518,6 +518,10 @@ footer .bottom .links a {
         display: flex;
     }
 
+    nav.open .language-selector {
+    display: none;
+}
+
     nav button#menuButton {
         display: flex;
     }
