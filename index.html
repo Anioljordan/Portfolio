@@ -7,7 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 
-    <title>Personal Portfolio | Aniol Jordan</title>
+    <title data-i18n="page_title">Personal Portfolio | Aniol Jordan</title>
 </head>
 
 <body>
@@ -15,18 +15,24 @@
     <nav>
         <div class="logo">
             <img src="assets/logo.png">
-            <a href="https://www.linkedin.com/in/aniol-jord%C3%A1n-l%C3%B3pez-35854123a/" target="_blank">Aniol Jordan
-                Lopez</a>
+            <a href="https://www.linkedin.com/in/aniol-jord%C3%A1n-l%C3%B3pez-35854123a/" target="_blank">Aniol Jordan Lopez</a>
         </div>
         <ul>
-            <li><a href="#main">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="diplomas.html">Education & Certifications</a></li>
+            <li><a href="#main" data-i18n="nav_home">Home</a></li>
+            <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="#about" data-i18n="nav_about">About Me</a></li>
+            <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+            <li><a href="diplomas.html" data-i18n="nav_education">Education & Certifications</a></li>
         </ul>
-        <button onclick="copyEmail()">Contact Me</button>
-        <div id="success-message">"Email copied to clipboard"</div>
+
+        <div class="language-selector">
+            <img src="assets/es.svg" alt="ES" id="lang-es" onclick="changeLanguage('es')" title="Español">
+            <img src="assets/cat.png" alt="CA" id="lang-ca" onclick="changeLanguage('ca')" title="Català">
+            <img src="assets/uk.png" alt="EN" id="lang-en" onclick="changeLanguage('en')" title="English">
+        </div>
+
+        <button onclick="copyEmail()" data-i18n="btn_contact">Contact Me</button>
+        <div id="success-message" data-i18n="email_copied">Email copied to clipboard</div>
         <button id="menuButton" onclick="openMenu()">
             <i class='bx bx-menu'></i>
         </button>
@@ -34,14 +40,12 @@
 
     <div class="main" id="main">
         <div class="left">
-            <h5>Hey, I am Aniol Jordan</h5>
-            <h3>I am <span>Full Stack Developer</span></h3>
-            <p>
-                I'm a Full Stack Developer focused on backend. I primarily work with Java, MySQL, HTML, and CSS to
-                build solid and efficient applications. I use Git to maintain an organized workflow and collaborate with
-                teams.
+            <h5 data-i18n="greeting">Hey, I am Aniol Jordan</h5>
+            <h3 data-i18n="role">I am <span>Full Stack Developer</span></h3>
+            <p data-i18n="main_desc">
+                I'm a Full Stack Developer focused on backend. I primarily work with Java, MySQL, HTML, and CSS to build solid and efficient applications. I use Git to maintain an organized workflow and collaborate with teams.
             </p>
-            <button onclick="location.href='diplomas.html'">Education & Certifications</button>
+            <button onclick="location.href='diplomas.html'" data-i18n="btn_education">Education & Certifications</button>
         </div>
         <div class="right">
             <img src="assets/header-img1.png">
@@ -49,43 +53,35 @@
     </div>
 
     <div class="skills" id="skills">
-        <h5>My Skills</h5>
-        <h3>My Expertise</h3>
+        <h5 data-i18n="skills_title">My Skills</h5>
+        <h3 data-i18n="skills_subtitle">My Expertise</h3>
         <div class="skill-items">
             <div class="item">
                 <div class="icon"><i class='bx bxl-java'></i></div>
-                <h4>Backend</h4>
-                <p>
-                    I have been programming with Java for 2 years, developing robust and scalable applications.
-                    I work with frameworks like Spring Boot and focus on writing clean, efficient, and well-structured
-                    code.
+                <h4 data-i18n="backend">Backend</h4>
+                <p data-i18n="backend_desc">
+                    I have been programming with Java for 2 years, developing robust and scalable applications. I work with frameworks like Spring Boot and focus on writing clean, efficient, and well-structured code.
                 </p>
             </div>
             <div class="item">
                 <div class="icon"><i class='bx bxl-angular'></i></div>
-                <h4>Frontend</h4>
-                <p>
-                    I develop modern, dynamic web applications using <strong>Angular</strong> as my main framework.
-                    I combine it with <strong>TypeScript</strong>, <strong>HTML</strong> and <strong>CSS</strong> to
-                    create scalable,
-                    responsive and interactive user interfaces.
-                </p>
-            </div>
-
-            <div class="item">
-                <div class="icon"><i class='bx bxs-data'></i></i></div>
-                <h4>Data Base</h4>
-                <p>
-                    For my applications, I have used MySQL for data management and also implemented MongoDB in projects
-                    that require NoSQL databases.
+                <h4 data-i18n="frontend">Frontend</h4>
+                <p data-i18n="frontend_desc">
+                    I develop modern, dynamic web applications using Angular as my main framework. I combine it with TypeScript, HTML and CSS to create scalable, responsive and interactive user interfaces.
                 </p>
             </div>
             <div class="item">
-                <div class="icon"><i class='bx bxl-github'></i></i></div>
-                <h4>Utils</h4>
-                <p>
-                    For planning, I have used tools like Trello and Figma, and for version control, I have worked with
-                    GitHub to manage and organize the development of the projects.
+                <div class="icon"><i class='bx bxs-data'></i></div>
+                <h4 data-i18n="database">Database</h4>
+                <p data-i18n="database_desc">
+                    For my applications, I have used MySQL for data management and also implemented MongoDB in projects that require NoSQL databases.
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon"><i class='bx bxl-github'></i></div>
+                <h4 data-i18n="utils">Utils</h4>
+                <p data-i18n="utils_desc">
+                    For planning, I have used tools like Trello and Figma, and for version control, I have worked with GitHub to manage and organize the development of the projects.
                 </p>
             </div>
         </div>
@@ -96,18 +92,10 @@
             <img src="assets/about-img3.png">
         </div>
         <div class="right">
-            <h5>About</h5>
-            <h3>About Me</h3>
-            <p>
-                I'm a passionate developer with a strong background in Cross-Platform Application Development. I have
-                completed a Higher Education Program in this field, which has provided me with a solid technical
-                foundation.
-                During my professional internship, I worked as a programmer developing various applications, allowing me
-                to apply my knowledge to real projects.
-                Additionally, I am always looking to improve my skills. I have taken self-taught courses in Git, Visual
-                Studio, HTML, CSS, and more to stay updated with the latest technologies and development practices.
-                My goal is to continue learning, enhance my skills, and contribute to projects that challenge me to grow
-                as a professional.
+            <h5 data-i18n="about_title">About</h5>
+            <h3 data-i18n="about_subtitle">About Me</h3>
+            <p data-i18n="about_desc">
+                I'm a passionate developer with a strong background in Cross-Platform Application Development. I have completed a Higher Education Program in this field, which has provided me with a solid technical foundation. During my professional internship, I worked as a programmer developing various applications, allowing me to apply my knowledge to real projects. Additionally, I am always looking to improve my skills. I have taken self-taught courses in Git, Visual Studio, HTML, CSS, and more to stay updated with the latest technologies and development practices. My goal is to continue learning, enhance my skills, and contribute to projects that challenge me to grow as a professional.
             </p>
         </div>
     </div>
@@ -115,8 +103,8 @@
     <div class="portfolio" id="portfolio">
         <div class="header">
             <div class="info">
-                <h5>Recent Projects</h5>
-                <h3>My Portfolio</h3>
+                <h5 data-i18n="recent_projects">Recent Projects</h5>
+                <h3 data-i18n="portfolio_title">My Portfolio</h3>
             </div>
         </div>
 
@@ -124,93 +112,90 @@
             <div class="item">
                 <img src="assets/ROSELLA.PNG">
                 <div class="info">
-                    <h4>WEB APP FOR A BASKETBALL CLUB</h4>
-                    <p>
-                        Web application for a basketball club, developed using Java, Spring Boot, MySQL, and Angular.
-                        <br>
-                        Also includes a mobile app built with Kotlin for managing a tournament organized by the club.
+                    <h4 data-i18n="project_rosella_title">WEB APP FOR A BASKETBALL CLUB</h4>
+                    <p data-i18n="project_rosella_desc">
+                        Web application for a basketball club, developed using Java, Spring Boot, MySQL, and Angular. Also includes a mobile app built with Kotlin for managing a tournament organized by the club.
                     </p>
-                    <!-- <a href="https://cbrosella.com/">View the Web <i class='bx bx-link-external'></i></a> -->
                 </div>
             </div>
             <div class="item">
                 <img src="assets/cafeapp.jpeg">
                 <div class="info">
-                    <h4>MOBILE COFFEE APPLICATION</h4>
-                    <p>
-                        Application developed in Kotlin using Jetpack Compose, aimed at discovering the best and
-                        highest-rated coffee shops in your area or anywhere in the world.
+                    <h4 data-i18n="project_coffee_title">MOBILE COFFEE APPLICATION</h4>
+                    <p data-i18n="project_coffee_desc">
+                        Application developed in Kotlin using Jetpack Compose, aimed at discovering the best and highest-rated coffee shops in your area or anywhere in the world.
                     </p>
-                    <a href="https://github.com/Astor98gas/TOPCOFFEE">View in GitHub <i
-                            class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/Astor98gas/TOPCOFFEE" data-i18n="view_github">View in GitHub <i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="item">
                 <img src="assets/ERP.PNG">
                 <div class="info">
-                    <h4>ERP</h4>
-                    <p>
-                        ERP for a furniture company, developed with Java, Spring Boot, MySQL, MongoDB, CSS, HTML, and
-                        JavaScript
+                    <h4 data-i18n="project_erp_title">ERP</h4>
+                    <p data-i18n="project_erp_desc">
+                        ERP for a furniture company, developed with Java, Spring Boot, MySQL, MongoDB, CSS, HTML, and JavaScript.
                     </p>
-                    <a href="https://github.com/Anioljordan/ERP">View in GitHub <i class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/Anioljordan/ERP" data-i18n="view_github">View in GitHub <i class='bx bx-link-external'></i></a>
                 </div>
-            </div>
-        </div>
-        <div class="portfolio" id="portfolio">
-
-            <div class="portfo-items">
-
-                <div class="item">
-                    <img src="assets/magatzem2.png">
-                    <div class="info">
-                        <h4>Management Applications</h4>
-                        <p>
-                            Management Application developed with JavaFX, Java, and MySQL.
-                        </p>
-                        <a href="https://github.com/Anioljordan/AplicacionAlmacen">View in GitHub <i
-                                class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="assets/PersonalPortfolio.png">
-                    <div class="info">
-                        <h4>Personal Portfolio</h4>
-                        <p>
-                            Este es mi portafolio personal desarollado con HTML y CSS.
-                        </p>
-                        <a href="https://github.com/Anioljordan/Portfolio">View in GitHub <i
-                                class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
 
+<div class="portfolio" id="portfolio">
+    <div class="portfo-items">
+
+        <div class="item">
+            <img src="assets/magatzem2.png">
+            <div class="info">
+                <h4 data-i18n="project_mgmtapps_title">Management Applications</h4>
+                <p data-i18n="project_mgmtapps_desc">
+                    Management Application developed with JavaFX, Java, and MySQL.
+                </p>
+                <a href="https://github.com/Anioljordan/AplicacionAlmacen" data-i18n="view_github">
+                    View in GitHub <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="assets/PersonalPortfolio.png">
+            <div class="info">
+                <h4 data-i18n="project_portfolio_title">Personal Portfolio</h4>
+                <p data-i18n="project_portfolio_desc">
+                    Este es mi portafolio personal desarollado con HTML y CSS.
+                </p>
+                <a href="https://github.com/Anioljordan/Portfolio" data-i18n="view_github">
+                    View in GitHub <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    </div>
 
 
-    <footer>
+
+  <footer>
         <div class="top">
             <div class="logo">
                 <img src="assets/logo.png">
                 <a>Aniol Jordan</a>
             </div>
             <ul>
-                <li><a href="#main">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="diplomas.html">Education & Certifications</a></li>
-                <li><a href="https://www.linkedin.com/in/aniol-jord%C3%A1n-l%C3%B3pez-35854123a/">Linkedin</a></li>
+                <li><a href="#main" data-i18n="nav_home">Home</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+                <li><a href="#about" data-i18n="nav_about">About Me</a></li>
+                <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+                <li><a href="diplomas.html" data-i18n="nav_education">Education & Certifications</a></li>
+                <li><a href="https://www.linkedin.com/in/aniol-jord%C3%A1n-l%C3%B3pez-35854123a/" data-i18n="linkedin">LinkedIn</a></li>
             </ul>
         </div>
         <div class="separator"></div>
         <div class="bottom">
-            <p>
-                Made By Aniol Jordan
-            </p>
-            <button onclick="copyEmail()">Contact Me</button>
+            <p data-i18n="made_by">Made By Aniol Jordan</p>
+            <button onclick="copyEmail()" data-i18n="btn_contact">Contact Me</button>
         </div>
     </footer>
 

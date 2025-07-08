@@ -651,3 +651,29 @@ footer button#menuButton {
     font-size: 24px;
     padding: 7px;
 }
+
+/* Style for language selector in navbar */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-selector img {
+    width: 32px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, border 0.2s ease;
+    border-radius: 4px;
+    opacity: 0.5;
+    border: 2px solid transparent;
+}
+
+.language-selector img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.language-selector img.active {
+    opacity: 1;
+}
