@@ -388,7 +388,7 @@ footer .bottom p {
 
 footer .bottom .links a {
     font-size: 12px;
-    margin-left: 14px;
+    margin-left: 10px;
 }
 
 /* responsive movil */
@@ -513,16 +513,20 @@ footer .bottom .links a {
     nav.open .logo {
         display: none;
     }
-        nav.open .language-selector {
+    nav.open .language-selector {
     display: none;
 }
     nav.open .skills {
     display: none;
 }
 
-    nav.open ul {
-        display: flex;
-    }
+nav.open ul {
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
 
 
 
@@ -667,7 +671,7 @@ footer button#menuButton {
 .language-selector {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .language-selector img {

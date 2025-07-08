@@ -39,8 +39,10 @@ document.querySelectorAll('.main, .skills, .about, .portfolio').forEach(section 
 
 //abrir menu movil
 function openMenu() {
-    document.querySelector('nav').classList.toggle('open');
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("open");
 }
+
 
 
 //cambiar idioma
